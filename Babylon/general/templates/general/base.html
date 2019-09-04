@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+<!--    <meta http-equiv="Content-Security-Policy" content=" object-src 'none'; child-src http://localhost:8000">-->
+
+  <title>Galaxy Tournaments</title>
+  <script src="{% static 'js/sign-up.js' %}"></script>
+  <script src="{% static 'js/nav-dropdown.js' %}"></script>
+
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/stylesheet.css' %}"
+  />
+<div class="wrapper">
+  {% block navbar %}
+  {% endblock navbar %}
+</div>
+
+  
+     <!--   <div class="social-icons">
+          <a href="#"><i class="icon ion-social-twitter"></i></a
+          ><a href="#"><i class="icon ion-social-facebook"></i></a
+          ><a href="#"><i class="icon ion-social-snapchat"></i></a
+          ><a href="#"><i class="icon ion-social-youtube"></i></a>
+        </div> -->
+       
+      </div>
+    </div>
+  </nav>
+</head>
+
+<body>
+    <div class = "registerPopup">
+      <div id="opaque"></div>
+    <iframe class = "popupDisplay" src="../register"  scrolling="no"></iframe>
+    <button type="button" onClick="Popup('registerPopup')"class="close popupX" aria-label="Close">X</button>
+  </div>
+  <div class = "loginPopup">
+      <div id="opaque"></div>
+      <iframe class = "popupDisplayLogin" src="../login"  scrolling="no"></iframe>
+      <button type="button" onClick="Popup('loginPopup')"class="close popupX" aria-label="Close">X</button>
+
+  </div>
+  <!-- <div> 
+    <img src="{% static 'images/black-stripe-torn.png' %}" width="" height="" top="10px" left="120px"> 
+  </div> -->
+  
+</body>
