@@ -7,8 +7,9 @@ from .forms import UserRegisterForm
 def register(request):
     print(request)
     if(request.method == "POST"):
+        print(request.POST)
         form = UserRegisterForm(request.POST)
-        print(form)
+        #print(form)
         print(form.is_valid())
         if form.is_valid():
             form.save()

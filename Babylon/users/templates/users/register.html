@@ -1,5 +1,14 @@
 {% extends "general/realnavbar.html" %} {% block content %}
 <div class = "register-background">
-<p>{{form.username}}</p>
+<form method="post">
+{% csrf_token %}
+{% for field in form %}
+    <th>{{field.label_tag}}</th>
+    <td>
+    {{field}}
+    </td>
+{% endfor %}
+<button type="submit">Submit</button>
+</form>
 </div>
 {% endblock content %}
