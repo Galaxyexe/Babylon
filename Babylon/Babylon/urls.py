@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 # views imported from apps
 from general import views as general_views
-#from users import views as user_views
+from users import views as user_views
 #from games import views as game_views
 from django.contrib.auth import views as auth_views
 #from games import scraper
@@ -16,6 +16,9 @@ urlpatterns = [
     path('team/', general_views.team, name="team"),
     path('games/', general_views.games, name="games"),
     path('waves/', general_views.waves, name="waves"),
+    path('register/', user_views.register, name='register'),
+    path('login/', auth_views.LoginView.as_view(template_name="users/login.html"), name="login"),
+    path('logout/', auth_views.LogoutView.as_view(template_name="mysite/index.html"), name="logout"),
 
     # path('register/', user_views.register, name='register'),
     # path('login/', auth_views.LoginView.as_view(template_name="users/login.html"), name="login"),
