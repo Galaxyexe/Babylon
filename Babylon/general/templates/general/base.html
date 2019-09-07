@@ -4,6 +4,8 @@
 <!--    <meta http-equiv="Content-Security-Policy" content=" object-src 'none'; child-src http://localhost:8000">-->
 
   <title>Galaxy Tournaments</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+
   <script src="{% static 'js/sign-up.js' %}"></script>
   <script src="{% static 'js/nav-dropdown.js' %}"></script>
 
@@ -42,17 +44,6 @@
 </head>
 
 <body>
-    <div class = "registerPopup">
-      <div id="opaque"></div>
-    <iframe class = "popupDisplay" src="../register"  scrolling="no"></iframe>
-    <button type="button" onClick="Popup('registerPopup')"class="close popupX" aria-label="Close">X</button>
-  </div>
-  <div class = "loginPopup">
-      <div id="opaque"></div>
-      <iframe class = "popupDisplayLogin" src="../login"  scrolling="no"></iframe>
-      <button type="button" onClick="Popup('loginPopup')"class="close popupX" aria-label="Close">X</button>
-
-  </div>
   <!-- <div> 
     <img src="{% static 'images/black-stripe-torn.png' %}" width="" height="" top="10px" left="120px"> 
   </div> -->

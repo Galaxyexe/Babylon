@@ -1,5 +1,4 @@
-{% extends "general/realnavbar.html" %} {% block content %}
-<div class = "register-background">
+<div class = "registerPopup">
 <form method="post">
 {% csrf_token %}
 {% for field in form %}
@@ -25,4 +24,3 @@
 <button type="submit">Submit</button>
 </form>
 </div>
-{% endblock content %}

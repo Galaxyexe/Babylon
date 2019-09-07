@@ -1,4 +1,10 @@
 {% extends "general/waves.html" %} {% block waves %}
+<!--<a id = "target" href ="{% url 'register' %}"/>-->
+<form id= "register_form" action="{% url 'register' %}" method="GET">
+    {% csrf_token %}
+        <input type="submit" name="submit" value="Submit Form" />
+    </form>
+    <div id="target"/>
 
 <body></body>
 

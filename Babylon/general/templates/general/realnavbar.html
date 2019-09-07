@@ -5,9 +5,9 @@
         <a class="action-button navbs babylon-anch" href="{% url 'home' %}">Babylon</a>
         <a class="banner-login navbs" href="{% url 'team' %}">Play</a>
         <a class="banner-login navbs" href="{% url 'games' %}">Games</a>
-        <a class="banner-login navbs" href="{% url 'team' %}">Team</a>
         <a class="banner-login navbs" href="{% url 'games' %}">News</a>
         <a class="banner-login navbs" href="{% url 'games' %}">Highlights</a>
+
         {% if user.is_authenticated %}
         <!-- <a class="navbs">{{user.username}}</a> -->
         <img class="navbs user-icon" src="{{ user.profile.profile_pic.url }}" onClick="navDropdown()"></img><!--  HTMLImageElement.onclick=-->
@@ -19,8 +19,14 @@
             </div>
           </div>
         {% else %}
-        <a class="banner-login navbs" onClick="Popup('loginPopup')">Log In</a>
-        <a class="banner-login navbs" onClick="Popup('registerPopup')">Sign Up</a> <!-- We need to convert from JS to something href can work with-->
+        <img class="navbs user-icon" src="{{ user.profile.profile_pic.url }}" onClick="navDropdown()"></img><!--  HTMLImageElement.onclick=-->
+        <div class="dropdown">
+          <div id="MyDropdown" class="dropdown-content">
+            <a href="{% url 'waves' %}">Sign Up</a>
+            <a href="#">Login</a>
+            <a href="{% url 'logout' %}">Team</a>
+            </div>
+          </div>
         {% endif %}
     </nav>
     <div class="page-format"></div>

@@ -1,23 +1,29 @@
 from django.shortcuts import render, redirect
+from django.template import loader
+from django.http import HttpResponse
 
 # Create your views here.
 from .forms import UserRegisterForm
 
 
 def register(request):
-    print(request)
+    print(request.path)
+    print("AAHAHAa")
     if(request.method == "POST"):
-        print(request.POST)
         form = UserRegisterForm(request.POST)
         #print(form)
-        print(form.is_valid())
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            return redirect("home")
+            return redirect(request.path)
     else:
-        form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+        context={
+        'form':UserRegisterForm(),
+        'page':"general/realnavbar.html"
+        }
+    template = loader.get_template("users/register.html")
+    return HttpResponse(template.render(context, request))
+    #return render(request, 'users/register.html', context)
 
 
 def profile(request):
