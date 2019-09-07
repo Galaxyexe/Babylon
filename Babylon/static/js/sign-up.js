@@ -12,12 +12,12 @@ function Popup(className) {
   //popup[0].setAttribute("style", "visibility: visible"); //hidden
 }
 $(document).ready(function(e){
-  $("#register_form").submit(function(e){
+  $("#register_press").click(function(e){
     console.log("A")
     e.preventDefault();
          $.ajax({
              url: $(this).attr('action'),
-             method: $(this).attr('method'),
+             method: "GET",
              success: function(data){ $('#target').html(data) }
          });
   });

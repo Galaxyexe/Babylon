@@ -22,7 +22,8 @@
         <img class="navbs user-icon" src="{{ user.profile.profile_pic.url }}" onClick="navDropdown()"></img><!--  HTMLImageElement.onclick=-->
         <div class="dropdown">
           <div id="MyDropdown" class="dropdown-content">
-            <a href="{% url 'waves' %}">Sign Up</a>
+              <!--<input type="submit" name="submit" value="Submit Form" />-->
+            <a id="register_press"action="{% url 'register' %}" >Sign Up</a>
             <a href="#">Login</a>
             <a href="{% url 'logout' %}">Team</a>
             </div>

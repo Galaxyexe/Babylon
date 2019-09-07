@@ -7,20 +7,17 @@ from .forms import UserRegisterForm
 
 
 def register(request):
-    print(request.path)
-    print("AAHAHAa")
     if(request.method == "POST"):
         form = UserRegisterForm(request.POST)
         #print(form)
+        print(form.is_valid())
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            return redirect(request.path)
-    else:
-        context={
-        'form':UserRegisterForm(),
-        'page':"general/realnavbar.html"
-        }
+            return redirect("home")
+    context={
+    'form':UserRegisterForm(),
+    }
     template = loader.get_template("users/register.html")
     return HttpResponse(template.render(context, request))
     #return render(request, 'users/register.html', context)

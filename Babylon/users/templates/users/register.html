@@ -1,3 +1,4 @@
+{% extends request.is_ajax|yesno:"users/useless.html,general/realnavbar.html" %} {% block content %}
 <div class = "registerPopup">
 <form method="post">
 {% csrf_token %}
@@ -24,3 +25,4 @@
 <button type="submit">Submit</button>
 </form>
 </div>
+{% endblock content %}
