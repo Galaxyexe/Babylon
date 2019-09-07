@@ -180,13 +180,6 @@
   position: relative;
   z-index: 1000;
 }
-.popupX {
-  color: #fff;
-  margin-top: -70px;
-  margin-right: 250px;
-  position: relative;
-  z-index: 1000;
-}
 .textInput,
 .emailinput {
   width: 485px;

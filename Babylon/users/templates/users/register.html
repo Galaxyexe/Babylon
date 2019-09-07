@@ -1,8 +1,9 @@
 {% extends request.is_ajax|yesno:"users/useless.html,general/realnavbar.html" %} {% block content %}
-<div class = "registerPopup">
+<div class = "register">
 <form method="post">
 {% csrf_token %}
 {% for field in form %}
+    <br/>
     <th>{{field.label_tag}}</th>
     <td>
     {{field}}
@@ -22,6 +23,7 @@
         </div>
     {% endfor %}
 {% endif %}
+<br/>
 <button type="submit">Submit</button>
 </form>
 </div>

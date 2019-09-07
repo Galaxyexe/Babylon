@@ -1,19 +1,19 @@
 // When the user clicks on <div>, open the popup
 function Popup(className) {
-  var popup = document.getElementsByClassName(className);
+  var popup = document.getElementById(className);
   console.log(popup);
   //popup.classList.toggle("show");
-  if (popup[0].style.visibility == "visible") {
-    popup[0].style.visibility = "hidden";
+  if (popup.style.visibility == "visible") {
+    popup.style.visibility = "hidden";
   } else {
-    popup[0].style.visibility = "visible";
+    popup.style.visibility = "visible";
   }
   //if (popup[0].getAttribute("visibility"))
   //popup[0].setAttribute("style", "visibility: visible"); //hidden
 }
 $(document).ready(function(e){
   $("#register_press").click(function(e){
-    console.log("A")
+    Popup("registerPopup")
     e.preventDefault();
          $.ajax({
              url: $(this).attr('action'),
