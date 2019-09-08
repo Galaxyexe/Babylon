@@ -1,6 +1,6 @@
 // When the user clicks on <div>, open the popup
-function Popup(className) {
-  var popup = document.getElementById(className);
+function Popup() {
+  var popup = document.getElementById('userPopup');
   console.log(popup);
   //popup.classList.toggle("show");
   if (popup.style.visibility == "visible") {

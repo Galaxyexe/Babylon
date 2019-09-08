@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from gamedb.pointcalculations import twitch
 
 # views imported from apps
 from general import views as general_views

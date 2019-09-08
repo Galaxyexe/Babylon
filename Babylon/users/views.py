@@ -1,25 +1,24 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 from .forms import UserRegisterForm
 
-
+@csrf_exempt
 def register(request):
     if(request.method == "POST"):
         form = UserRegisterForm(request.POST)
-        #print(form)
         print(form.is_valid())
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             return redirect("home")
-    context={
-    'form':UserRegisterForm(),
-    }
+    else:
+        form=UserRegisterForm();
     template = loader.get_template("users/register.html")
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render({'form': form}, request))
     #return render(request, 'users/register.html', context)
 
 

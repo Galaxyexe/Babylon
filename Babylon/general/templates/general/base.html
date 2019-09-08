@@ -25,6 +25,11 @@
     type="text/css"
     href="{% static 'css/users.css' %}"
   />
+  <link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/games.css' %}"
+/>
 <div class="wrapper">
   {% block navbar %}
   {% endblock navbar %}
@@ -48,10 +53,10 @@
     <img src="{% static 'images/black-stripe-torn.png' %}" width="" height="" top="10px" left="120px"> 
   </div> -->
 
-  <div id="registerPopup">
-    <div id="opaque"></div>
+  <div id="userPopup">
+    <div id="opaque"  onClick="Popup()"></div>
     <div id="target"></div>
-    <button type="button" onClick="Popup('registerPopup')"class="popupX" aria-label="Close">X</button>
+    <button type="button" onClick="Popup()"class="popupX" aria-label="Close">X</button>
 
     
   </div>
