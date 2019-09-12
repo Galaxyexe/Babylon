@@ -1,15 +1,24 @@
-.register {
+.user_pages {
   z-index: 100000;
   background: #00cc66;
   font-size:20px;
   padding: 5px;
 
 }
+#parentPopup{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 #userPopup {
   visibility: hidden;
   overflow: hidden;
+  /*margin: auto auto;*/
   top: calc(15%);
-  left: calc(37%);
+  /*left: calc(37%);
+  left:50%;
+  margin-left:width;
+  transform: translate(50%, 50%);*/
   position: fixed;
   border-style: solid;
   border-width: 2px;

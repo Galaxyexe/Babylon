@@ -13,12 +13,18 @@ function Popup() {
 }
 $(document).ready(function(e){
   $("#register_press").click(function(e){
-    Popup("registerPopup")
-    e.preventDefault();
-         $.ajax({
-             url: $(this).attr('action'),
-             method: "GET",
-             success: function(data){ $('#target').html(data) }
-         });
+    ajax($(this), e);
   });
+  $("#login_press").click(function(e){
+    ajax($(this), e);
+  });  
 });
+function ajax(press, e){
+  Popup()
+  e.preventDefault();
+  $.ajax({
+      url: press.attr('action'),
+      method: "GET",
+      success: function(data){ $('#target').html(data) }
+  });
+}

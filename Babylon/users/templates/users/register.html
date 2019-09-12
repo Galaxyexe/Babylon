@@ -1,5 +1,5 @@
 {% extends request.is_ajax|yesno:"users/useless.html,general/realnavbar.html" %} {% block content %}
-<div class = "register">
+<div class = "user_pages">
 <form id="register-form" name="register-form" action="{% url 'register' %}">
 {% csrf_token %}
     {% for field in form %}
@@ -31,7 +31,6 @@
 <script type="text/javascript">
 var frm = $(".register-form")
   $("#register-form").submit(function(e){
-    var form = $(this);
     e.preventDefault()
          $.ajax({
              data: form.serialize(),
