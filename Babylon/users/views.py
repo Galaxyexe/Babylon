@@ -2,9 +2,11 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 @csrf_exempt
 def register(request):
@@ -21,7 +23,7 @@ def register(request):
     return HttpResponse(template.render({'form': form}, request))
     #return render(request, 'users/register.html', context)
 
-
+@login_required
 def profile(request):
     if (request.method=="POST"):
         u_form=UserUpdateForm(request.POST,instance=request.user)
@@ -34,7 +36,13 @@ def profile(request):
     else:
         u_form=UserUpdateForm(instance=request.user)
         p_form=ProfileUpdateForm(instance=request.user.profile)
+    profile=request.user.profile._meta.get_fields()
+    templist=[]
+    for i in range(len(profile)):
+        templist.append(profile[i].value_from_object(request.user.profile))
+    profile=templist
     context={
+    'profile':profile,
     'u_form':u_form,
     'p_form':p_form
     }

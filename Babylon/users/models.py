@@ -11,4 +11,3 @@ class Profile(models.Model):
     profile_pic = models.ImageField(
         upload_to='profile_pics', default='default.jpg')
     description = models.CharField(max_length=300, default='')
-    phone = models.IntegerField(default=0)
