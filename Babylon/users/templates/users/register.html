@@ -29,8 +29,8 @@
 </form>
 </div>
 <script type="text/javascript">
-var frm = $(".register-form")
   $("#register-form").submit(function(e){
+    var form = $(this);
     e.preventDefault()
          $.ajax({
              data: form.serialize(),
