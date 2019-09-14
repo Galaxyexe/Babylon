@@ -36,8 +36,10 @@ var frm = $(".register-form")
              data: form.serialize(),
              url: form.attr('action'),
              type: "POST",
-             success: function(data){ $('#target').html(data) },
-             error:function(data){alert("error")}
+             success: function(data){
+                 $('#target').html(data) 
+                 if ($.isEmptyObject($.find('#register-form')))location.reload();
+                },
          });
   })
 </script>
