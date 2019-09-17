@@ -67,3 +67,7 @@
   display: inline-block;
   float: left;
 }
+.profile-section{
+  background-color:green;
+  margin-left:100px;
+}

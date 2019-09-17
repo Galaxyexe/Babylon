@@ -41,3 +41,36 @@
   .cell-9 {
     background: maroon;
   }
+  .triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid red;
+    border-bottom: 50px solid transparent;
+    z-index: 100;
+  }
+  .triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid red;
+    border-bottom: 50px solid transparent;
+    z-index: 100;
+  }
+
+  .triangle-row1 {
+    left: 50px;
+    top: 300px;
+  }
+  .triangle-row2 {
+    left: 400px;
+    top: 6rem;
+
+  }
+  .triangle-row3 {
+    left: 3rem;
+    top: 9rem;
+
+  }
+
+ 
