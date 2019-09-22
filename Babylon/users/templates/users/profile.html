@@ -4,10 +4,13 @@
   <div class="media profile-section">
     <img class="navbs user-icon user-icon-extended" src="{{ user.profile.profile_pic.url }}">
     <div class="media-body">
-      <h2 class="account-heading">{{ user.username }}</h2>
-      <p class="text-secondary">{{ user.email }}</p>
+      <h2><u>{{ user.username }}</u></h2>
+      <p class="text-light">{{ user.email }}</p>
+      <p class="text-light">{{ user.phone }}</p>
+      
     </div>
   </div>
+  <br style="clear:both" />
   <div class = "border-bottom mb-4">Profile Desc</div>
   {% for field in profile %}
   <p>{{field}}</p>

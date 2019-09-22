@@ -55,6 +55,7 @@
 
 
 }
+
 .input-text{
   display: inline-block;
     float: left;
@@ -69,5 +70,9 @@
 }
 .profile-section{
   background-color:green;
+  margin-top:10px;
+  border-radius:0px 100px 100px 0px;
   margin-left:100px;
+  float:left;
+  padding-right:100px;
 }
