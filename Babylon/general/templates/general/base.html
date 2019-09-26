@@ -18,11 +18,6 @@
   <link
     rel="stylesheet"
     type="text/css"
-    href="{% static 'css/stylesheet.css' %}"
-  />
-  <link
-    rel="stylesheet"
-    type="text/css"
     href="{% static 'css/users.css' %}"
   />
   <link
@@ -30,28 +25,27 @@
   type="text/css"
   href="{% static 'css/games.css' %}"
 />
-<div class="wrapper">
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static 'css/navbar.css' %}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static 'css/waves.css' %}"
+/>
+<link
+    rel="stylesheet"
+    type="text/css"
+    href="{% static 'css/popup.css' %}"
+  />
+<body>
+  <header>
   {% block navbar %}
   {% endblock navbar %}
-</div>
+  </header>
 
-  
-     <!--   <div class="social-icons">
-          <a href="#"><i class="icon ion-social-twitter"></i></a
-          ><a href="#"><i class="icon ion-social-facebook"></i></a
-          ><a href="#"><i class="icon ion-social-snapchat"></i></a
-          ><a href="#"><i class="icon ion-social-youtube"></i></a>
-        </div> -->
-       
-      </div>
-    </div>
-  </nav>
-</head>
-
-<body>
-  <!-- <div> 
-    <img src="{% static 'images/black-stripe-torn.png' %}" width="" height="" top="10px" left="120px"> 
-  </div> -->
 <div id= "parentPopup">
   <div id="userPopup">
     <div id="opaque"  onClick="Popup()"></div>

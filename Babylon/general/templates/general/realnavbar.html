@@ -2,11 +2,13 @@
 
   
     <nav id="homescreen-banner">
+      <div id="nav-buttons">
         <a class="action-button navbs babylon-anch" href="{% url 'home' %}">Babylon</a>
-        <a class="banner-login navbs" href="{% url 'team' %}">Play</a>
-        <a class="banner-login navbs" href="{% url 'games' %}">Games</a>
-        <a class="banner-login navbs" href="{% url 'games' %}">News</a>
-        <a class="banner-login navbs" href="{% url 'games' %}">Highlights</a>
+        <a class="banner-login navbs a-fix" href="{% url 'team' %}">Play</a>
+        <a class="banner-login navbs a-fix" href="{% url 'games' %}">Games</a>
+        <a class="banner-login navbs a-fix" href="{% url 'games' %}">News</a>
+        <a class="banner-login navbs a-fix" href="{% url 'games' %}">Highlights</a>
+      </div>
 
         {% if user.is_authenticated %}
         <!-- <a class="navbs">{{user.username}}</a> -->

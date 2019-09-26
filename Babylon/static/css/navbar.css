@@ -1,0 +1,179 @@
+#homescreen-banner {
+    background: white; /* #00cc66 */
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    float: auto;
+    position: relative; /* keeps navbar from breaking when scrunched, follow w media queries */
+    z-index: 10;
+  }
+  
+  .banner-login {
+    border-radius: 15px;
+    background: #00a854;
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    width: 7.5em;
+    height: 3em;
+    line-height: 300%; /* Position of text in blue blox */
+    transition: transform 0.2s;
+    margin-right: 30px;
+  }
+
+.banner-login, .babylon-anch {
+    transition: transform 0.2s;
+
+}
+
+  .banner-login:hover, .babylon-anch:hover {
+    cursor: pointer;
+    -ms-transform: scale(1.265); /* IE 9 */
+    -webkit-transform: scale(1.265); /* Safari 3-8 */
+    transform: scale(1.265);
+  }
+
+  #nav-buttons {
+    position: absolute;
+    top: 0px;
+    width: 800px;
+    height: 100px;
+  }
+
+  .babylon-anch {
+    border-radius: 10px;
+    color: #00cc66;
+    font-size: 20px;
+    width: 7.5em;
+    height: 3em;
+    line-height: 250%;
+  }
+  
+  .babylon-button:hover {
+    cursor: pointer;
+    color: #00cc66
+  }
+
+  .babylon-anch:hover, .babylon-anch:active {
+    text-decoration: none;
+    color: #00cc66
+  }
+
+  .a-fix, .babylon-anch {
+    text-decoration: none;
+  }
+  .a-fix:visited, .babylon-anch:visited { 
+      text-decoration: none; 
+    }
+  .a-fix:hover ,.babylon-anch:hover { 
+      text-decoration: none; 
+    }
+  .a-fix:focus, .babylon-anch:hover { 
+      text-decoration: none; 
+    }
+  .a-fix:hover, .a-fix:active { 
+      text-decoration: none;
+      color: white;
+    }
+
+    .navbs {
+        position: relative;
+        float: left;
+        top: 15px;
+        bottom: 10px;
+        text-align: center;
+        vertical-align: middle;    
+      }
+      
+      
+      .user-icon {
+        position: relative;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        box-sizing: border-box;
+        right: 30px;
+      }
+      .user-icon:hover {
+        cursor: pointer;
+      }
+      .user-icon-extended{
+      
+        width: 200px;
+        height: 200px;
+        margin-top:-15px;
+        margin-bottom:15px;
+        right: 30px;
+      }
+      .user-icon-extended, .dropdown  {
+          margin-left:-100px;
+          float: right;
+      }
+      /* The container <div> - needed to position the dropdown content */
+      .dropdown {
+        position: relative;
+        display: inline-block; /* aligns box with user icon */
+        z-index: 100;
+        left: 30px;
+        bottom: 3px;
+      }
+      /* @media (max-width: 1080px) { .dropdown, .user-icon {
+          float: none;
+          left: auto;
+
+         }
+        }
+       */
+      /* Dropdown Content (Hidden by Default) */
+      .dropdown-content {
+        display: none;
+        top: 83px;
+        position: relative;
+        background-color: #645f5f;
+        min-width: 80px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      
+      /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+      .show {
+        display: block;
+      }
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+
+
+  

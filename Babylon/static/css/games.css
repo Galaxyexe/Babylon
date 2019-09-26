@@ -2,11 +2,8 @@
     height: 90vh;
     width: 100%;
     margin: 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     padding: 2%; /* Maybe change from percent to rem */
-    grid-gap: 20px 20px;
+    position:absolute;
   }
   .cell {
     color: white;
@@ -41,6 +38,13 @@
   .cell-9 {
     background: maroon;
   }
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px 20px;
+    display: grid;
+    grid-gap: 20px 20px;
+  }
   .triangle-left {
     width: 0;
     height: 0;
@@ -48,8 +52,10 @@
     border-right: 100px solid red;
     border-bottom: 50px solid transparent;
     z-index: 100;
+    position:absolute;
   }
   .triangle-right {
+    position:absolute;
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
