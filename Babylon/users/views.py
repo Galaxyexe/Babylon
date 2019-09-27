@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
+from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -16,6 +17,7 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
+            messages.success(request,f'Accunt created for {username}! Login!')
             return HttpResponse("home")
     else:
         form=UserRegisterForm();
@@ -47,3 +49,6 @@ def profile(request):
     'p_form':p_form
     }
     return render(request, 'users/profile.html', context)
+
+def popup(request):
+    return render(request, 'users/login.html')

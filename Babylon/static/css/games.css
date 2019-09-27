@@ -3,7 +3,7 @@
     width: 100%;
     margin: 5%;
     padding: 2%; /* Maybe change from percent to rem */
-    position:absolute;
+    position: absolute;
   }
   .cell {
     color: white;
@@ -55,13 +55,13 @@
     position:absolute;
   }
   .triangle-right {
-    position:absolute;
+    
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
     border-left: 100px solid red;
     border-bottom: 50px solid transparent;
-    z-index: 100;
+    z-index: 10000000000;
   }
 
   .triangle-row1 {

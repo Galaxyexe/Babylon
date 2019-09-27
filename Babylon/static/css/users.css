@@ -5,49 +5,7 @@
   padding: 5px;
 
 }
-#parentPopup{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-#userPopup {
-  visibility: hidden;
-  overflow: hidden;
-  /*margin: auto auto;*/
-  top: calc(15%);
-  /*left: calc(37%);
-  left:50%;
-  margin-left:width;
-  transform: translate(50%, 50%);*/
-  position: fixed;
-  border-style: solid;
-  border-width: 2px;
-  
-}
-#opaque {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 10000;
-  background-color: black;
-  filter: alpha(opacity=30);
-  opacity: 0.3;
-}
-.popupX {
-  color: #fff;
-  background-color: #000;
-  width: 100%;
-  border-width:0px;
-  position: relative;
-  z-index: 1000000;
-}
-#target{
 
-  position: relative;
-  z-index:100000;
-}
 .br-users { /* may not have cross browser support */
   display: block;
   padding-top: 20px;
