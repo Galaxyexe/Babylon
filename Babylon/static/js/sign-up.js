@@ -1,3 +1,4 @@
+/*
 // When the user clicks on <div>, open the popup
 function Popup() {
   var popup = document.getElementById('userPopup');
@@ -18,6 +19,7 @@ $(document).ready(function(e){
     ajax($(this), e);
   });  
 });
+
 function ajax(press, e){
   Popup()
   e.preventDefault();
@@ -27,3 +29,4 @@ function ajax(press, e){
       success: function(data){ $('#target').html(data) }
   });
 }
+*/

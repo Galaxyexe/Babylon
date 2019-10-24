@@ -3,11 +3,9 @@
 <div>
   <div class="media profile-section">
     <img class="navbs user-icon user-icon-extended" src="{{ user.profile.profile_pic.url }}">
-    <div class="media-body">
+    <div>
       <h2><u>{{ user.username }}</u></h2>
-      <p class="text-light">{{ user.email }}</p>
-      <p class="text-light">{{ user.phone }}</p>
-      
+      <p class="text-light">  {{user.profile.description}}</p>
     </div>
   </div>
   <br style="clear:both" />

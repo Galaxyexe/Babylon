@@ -10,8 +10,6 @@ def home(request):  # can change into class view later
 def team(request):
     return render(request, 'general/team.html')
 
-def games(request):
-    return render(request, 'general/game-page.html')
-
 def waves(request):
     return render(request, 'general/waves.html')
+

@@ -16,6 +16,7 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous"
   />
+  <link rel="shortcut icon" href="{% static 'images/Luma-Green-icon.icon' %}" />
   <link
     rel="stylesheet"
     type="text/css"
@@ -46,7 +47,12 @@ href="{% static 'css/waves.css' %}"
   {% block navbar %}
   {% endblock navbar %}
   </header>
+  <div id ="login-button">
+    <div id="bg-modal">
+    </div>
+    </div>
 
+<!--
 <div id= "parentPopup">
   <div id="userPopup">
     <div id="opaque"  onClick="Popup()"></div>
@@ -54,5 +60,5 @@ href="{% static 'css/waves.css' %}"
     <button type="button" onClick="Popup()"class="popupX" aria-label="Close">X</button>
   </div>
   </div>
-
+-->
 </body>

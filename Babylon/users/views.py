@@ -18,7 +18,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request,f'Accunt created for {username}! Login!')
-            return HttpResponse("home")
+            return HttpResponse("registered")
     else:
         form=UserRegisterForm();
     template = loader.get_template("users/register.html")
@@ -50,5 +50,5 @@ def profile(request):
     }
     return render(request, 'users/profile.html', context)
 
-def popup(request):
-    return render(request, 'users/login.html')
+# def popup(request):
+#     return render(request, 'users/login.html')

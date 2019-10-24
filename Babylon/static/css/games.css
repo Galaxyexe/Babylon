@@ -3,7 +3,6 @@
     width: 100%;
     margin: 5%;
     padding: 2%; /* Maybe change from percent to rem */
-    position: absolute;
   }
   .cell {
     color: white;
@@ -40,10 +39,8 @@
   }
   .grid{
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 20px 20px;
     display: grid;
-    grid-gap: 20px 20px;
   }
   .triangle-left {
     width: 0;
@@ -55,16 +52,18 @@
     position:absolute;
   }
   .triangle-right {
-    
+    left: 0%;
+    position:absolute;
     width: 0;
     height: 0;
     border-top: 50px solid transparent;
     border-left: 100px solid red;
     border-bottom: 50px solid transparent;
-    z-index: 10000000000;
+    margin-top:3rem;
+
   }
 
-  .triangle-row1 {
+  /*.triangle-row1 {
     left: 50px;
     top: 300px;
   }

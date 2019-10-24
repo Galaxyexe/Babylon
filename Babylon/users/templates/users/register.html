@@ -1,46 +1,36 @@
 {% extends request.is_ajax|yesno:"users/useless.html,general/realnavbar.html" %} {% block content %}
-<div class = "user_pages">
-<form id="register-form" name="register-form" action="{% url 'register' %}">
-{% csrf_token %}
+<div class="modal-content">
+
+    <a class="action-button navbs babylon-anch" href="#">Babylon</a>
+    <div id="close-button" class="close" onClick="popupVisible()">+</div>
+<form id = "register-form"method="post"  action="{% url 'register' %}">
+    {% csrf_token %}
     {% for field in form %}
     <br class="br-users"/>
-    <th class = "input-text">{{field.label_tag}}</th>
-    <td class = "input-box">
+    <th class = "textbox-loc">{{field.label_tag}}</th>
+    <td class = "textbox-loc">
     {{field}}
     </td>
-{% endfor %}
-<br class="br-users"/>
-<button action="{% url 'register' %}">Sign Up</button>
-
-{% if form.errors %}
-    {% for field in form %}
-        {% for error in field.errors %}
-            <div class="alert alert-danger">
-                <strong class="h5">{{ error|escape }}</strong>
-            </div>
-        {% endfor %}
-    {% endfor %}
-    {% for error in form.non_field_errors %}
-        <div class="alert alert-danger">
-            <strong class= "h5">{{ error|escape }}</strong>
-        </div>
-    {% endfor %}
-{% endif %}
+    {% endfor %} 
+    <button type="submit" action="{% url 'register' %}" id="login_button" class="login-button a-fix">Register</button>
 </form>
 </div>
+
 <script type="text/javascript">
   $("#register-form").submit(function(e){
     var form = $(this);
-    e.preventDefault()
-         $.ajax({
-             data: form.serialize(),
-             url: form.attr('action'),
-             type: "POST",
-             success: function(data){
-                 $('#target').html(data) 
-                 if ($.isEmptyObject($.find('#register-form')))location.reload();
-                },
-         });
-  })
+      e.preventDefault()
+           $.ajax({
+               data: form.serialize(),
+               url: form.attr('action'),
+               type: "POST",
+               success: function(data){
+                console.log($('#bg-modal').html())
+                console.log(data)
+                   if($('#bg-modal').html()[0]==data[0])$('#bg-modal').html(data) 
+                   else location.reload();
+                  },
+           });
+    })
 </script>
 {% endblock content %}
